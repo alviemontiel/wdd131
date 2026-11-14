@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+
+    .navigation {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        background: transparent;
+    }
+
+    .navigation a {
+        padding: 0.5rem 1rem;
+    }
+
+    .container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
