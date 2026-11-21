@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Country Page</title>
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals - Alvie Montiel | W03 Assignment: Country Page, The country I live in.">
+    <meta name="author" content="Alvie Montiel">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="styles/place.css">
+    <!-- JavaScript (Deferred) -->
+    <script src="scripts/temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Philippines</h1>
+    </header>
+
+    <main>
+        <!-- Hero Image Section using srcset in WebP format -->
+        <div class="hero-container">
+            <img src="images/philippines-rchipelago.webp"
+                srcset="images/philippines-eagle.webp 400w, images/philippines-eagle.webp 800w, images/philippines-rchipelago.webp 1200w"
+                sizes="(max-width: 767px) 100vw, 1200px" alt="Scenic landscape of the Philippines" class="hero-image">
+        </div>
+
+        <!-- Data Section -->
+        <section class="card data-card">
+            <h2>Data</h2>
+            <ul>
+                <li><span class="label">Area:</span> <span class="value">300,000 sq km</span></li>
+                <li><span class="label">Population:</span> <span class="value">117,724,472</span></li>
+                <li><span class="label">Capital:</span> <span class="value">Manila</span></li>
+                <li><span class="label">Languages:</span> <span class="value">Filipino, English</span></li>
+                <li><span class="label">Currency:</span> <span class="value">Philippine Peso (PHP)</span></li>
+                <li><span class="label">Time Zone:</span> <span class="value">UTC+8</span></li>
+                <li><span class="label">Calling Code:</span> <span class="value">+63</span></li>
+                <li><span class="label">Internet TLD:</span> <span class="value">.ph</span></li>
+            </ul>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="card weather-card">
+            <h2>Weather</h2>
+            <!-- Mobile Weather Icon SVG (Hidden in wider view via CSS) -->
+            <div class="weather-icon-mobile">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#0038a8" stroke-width="2">
+                    <circle cx="12" cy="12" r="5" fill="#fcd116"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg>
+            </div>
+            <ul>
+                <li><span class="label">Temperature:</span> <span class="value">29 °C</span></li>
+                <li><span class="label">Conditions:</span> <span class="value">Sunny</span></li>
+                <li><span class="label">Wind:</span> <span class="value">12 km/h</span></li>
+                <li><span class="label">Wind Chill:</span> <span class="value" id="windchill-output">N/A</span></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="current-year"></span> Alvie Ramires Montiel ☀️ Philippines</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
+    </footer>
+
+</body>
+
+</html>
